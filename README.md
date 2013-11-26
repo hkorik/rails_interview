@@ -2,13 +2,15 @@ As part of the Scholastic interview process for Ruby on Rails software engineeri
 we require that every candidate clones this git repository, completes the requested
 exercises, commit your work to a local repository, and send the repository to us.
 
-==Setup
+Setup
+=====
 1. Clone the rails_interview repository onto your development environment.
 2. Setup the Rails installation using Bundler and point to the included sqlite database.
 
-==Required Excercises
+Required Excercises
+===================
 
-===User Story 1
+###User Story 1
 As an authenticated user, I shall be able to add a Book to the system
 with the following fields:
 - Title - 255 varchar
@@ -26,7 +28,7 @@ be prompted with an error if an invalid ISBN is entered (numbers only, must ente
 
 *Note: You may use Active Admin or any other admin UI gem to achieve these requirements.
 
-===User Story 2
+###User Story 2
 As an anonymous user, when I visit the homepage I shall see a listing of all
 books entered into the system sorted ascending by the rank assigned to the book. Each
 book record shall display the following fields in the following order:
@@ -42,7 +44,8 @@ If multiple book records have the same rank, the offending records shall be sort
 
 *Note: You may use any web driver for Cucumber, though, Watir is recommended.
 
-==Submitting Application
+Submitting Application
+======================
 1. Add your resume to the doc directory.
 2. Zip your local copy of the repository with all code and resume committed and email the zip to the requesting interviewer.
 
