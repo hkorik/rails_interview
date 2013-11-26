@@ -13,11 +13,13 @@ Required Excercises
 ###User Story 1
 As an authenticated user, I shall be able to add a Book to the system
 with the following fields:
+
 * Title - 255 varchar
 * Author - 255 varchar
 * ISBN 10 - 10 digit integer
 * ISBN 13 - 13 digit integer
 * Rank - 4 digit integer
+
 While adding a new Book, I shall be promoted with an error if a book
 with the same ISBN 10 or ISBN 13 already exists in the system. I shall also
 be prompted with an error if an invalid ISBN is entered (numbers only, must enter all digits).
@@ -32,10 +34,12 @@ be prompted with an error if an invalid ISBN is entered (numbers only, must ente
 As an anonymous user, when I visit the homepage I shall see a listing of all
 books entered into the system sorted ascending by the rank assigned to the book. Each
 book record shall display the following fields in the following order:
+
 * Title - Truncated after 65 chars
 * Author
 * ISBN 10
 * ISBN 13
+
 If multiple book records have the same rank, the offending records shall be sorted alphabetically by title.
 
 1. Add a Cucumber test to ensure that books are displayed properly and are sorted properly.
@@ -48,4 +52,3 @@ Submitting Application
 ======================
 1. Add your resume to the doc directory.
 2. Zip your local copy of the repository with all code and resume committed and email the zip to the requesting interviewer.
-
