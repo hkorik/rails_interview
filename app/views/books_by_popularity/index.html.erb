@@ -1,2 +1,23 @@
 <h1>Scholastic Most Popular Books</h1>
-<p>Find me in app/views/books_by_popularity/index.html.erb</p>
+
+<table class="table">
+	<thead>
+		<th>Title</th>
+		<th>Author</th>
+		<th>ISBN 10</th>
+		<th>ISBN 13</th>
+		<th>Rank</th>
+	</thead>
+<% @books.each do |book| %>
+	<tr>
+		<td><%= book.title.truncate(65) %></td>		
+		<td><%= book.author %></td>
+		<td><%= book.ISBN10 %></td>
+		<td><%= book.ISBN13 %></td>
+		<td><%= book.rank %></td>
+	</tr>
+<% end %>
+</table>
+
+<a class="btn btn-primary" href='/login'>Add a Book</a>
+<!-- <p>Find me in app/views/books_by_popularity/index.html.erb</p> -->

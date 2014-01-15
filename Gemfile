@@ -21,7 +21,12 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'hirb'
+gem 'rails-footnotes', '>= 3.7.9', :group => :development
+gem 'bootstrap-sass', '~> 2.3.2.1'
+gem 'simple_form'
+gem "watir-webdriver", "~> 0.6.4"
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

@@ -1,7 +1,14 @@
 RailsInterview::Application.routes.draw do
-  get "books_by_popularity/index"
-  root :to => 'books_by_popularity#index'
 
+  resources :sessions, :only => [:new, :create, :destroy]
+
+  post 'create_book' => 'books_by_popularity#create', as: :createBook
+  
+  match '/' => 'books_by_popularity#index'
+  match '/new_book' => 'books_by_popularity#new', as: :bookForm
+  match '/login' => 'sessions#new', as: :signin
+  match '/signout', :to => 'sessions#destroy', as: :signout
+ 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

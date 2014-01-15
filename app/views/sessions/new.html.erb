@@ -1,0 +1,21 @@
+<!-- Admin Name is Hershy -->
+<div class="wrapper">
+	<a class="btn btn-primary float_right" href="/">Return to Home</a>
+
+	<h1 class="">Login Page</h1>
+
+
+	<% if flash[:error_message] %>
+			<p class="red_text"><%= flash[:error_message] %></p>
+	<% end %>
+
+	<% if flash[:notice] %>
+			<p class="red_text"><%= flash[:notice] %></p>
+	<% end %>
+
+	<%= simple_form_for(:session, :url => sessions_path) do |f| %>
+		<%= f.input :name %>
+		<%= f.button :submit, value: "Admin Login", class: 'btn btn-success' %>
+	<% end %>
+</div>
+<!-- <p>Find me in app/views/sessions/new.html.erb</p> -->

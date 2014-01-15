@@ -1,0 +1,22 @@
+<div class="wrapper">	
+	<a class="btn btn-danger float_right" href='/signout'>Log Out</a>
+
+	<h1>Add a Book!</h1>
+
+	<% if flash[:error_messages] %>
+		<% flash[:error_messages].each do |error| %>
+			<p class="red_text"><%= error %></p>
+		<% end %>
+	<% else %>
+		<p class="green_text"><%= flash[:success_message] %></p>
+	<% end %>
+
+	<%= simple_form_for(:create_book, :url => createBook_path) do |f| %>
+		<%= f.input :title, label: 'Title'%>
+		<%= f.input :author, label: 'Author'%>
+		<%= f.input :ISBN10, label: 'ISBN 10'%>
+		<%= f.input :ISBN13, label: 'ISBN 13'%>
+		<%= f.input :rank, label: 'Rank'%>
+		<%= f.button :submit, value: "Submit Book", class: 'btn btn-success' %>
+	<% end %>
+</div>
